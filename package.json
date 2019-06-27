@@ -1,0 +1,16 @@
+{
+  "name": "420bot",
+  "version": "1.0.0",
+  "description": "A bot for 420 celebrations made for discords hackathon",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Climb",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "node-cron": "^2.0.3",
+    "opusscript": "0.0.6"
+  }
+}

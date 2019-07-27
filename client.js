@@ -35,38 +35,7 @@ client.once('ready', () => {
         textChannel.send(imgArray[Math.floor(Math.random() * imgArray.length)]);
         textChannel.send(textArray[Math.floor(Math.random() * textArray.length)]);
     };
-
-    cron.schedule("00 20 4 20 4 *", () => {
-        // 4/20 4:20 AM
-        voiceChannel.join()
-        .then(connection => {
-            var dispatcher = connection.playFile(value);
-            dispatcher.on('end', function(){
-                voiceChannel.leave();
-            });
-            dispatcher.on('error', function(e){
-                 console.log(e);
-            });
-         })
-        .catch(console.error);
-        fourTwentyMsg();
-    });
-
-    cron.schedule("00 20 16 20 4 *", () => {
-        voiceChannel.join()
-        .then(connection => {
-            var dispatcher = connection.playFile(value);
-            dispatcher.on('end', function(){
-                voiceChannel.leave();
-            });
-            dispatcher.on('error', function(e){
-                console.log(e);
-            });
-        })
-        .catch(console.error);
-        fourTwentyMsg();
-    });
-
+	
     cron.schedule("00 20 4 * * *", () => {
         voiceChannel.join()
         .then(connection => {
